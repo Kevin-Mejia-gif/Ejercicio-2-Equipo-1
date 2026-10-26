@@ -1,0 +1,31 @@
+\begin{table}[H]
+\centering
+\caption{Pruebas de raíz unitaria}
+\label{tab:raices}
+\footnotesize
+\begin{tabular}{@{}llrrcrrc@{}}
+\toprule
+ & & \multicolumn{3}{c}{ADF} & \multicolumn{3}{c}{KPSS} \\
+\cmidrule(lr){3-5}\cmidrule(l){6-8}
+Serie & Transformación & Estad. & VC 5\% & Rechaza $H_0$ & Estad. & VC 5\% & Rechaza $H_0$ \\
+\midrule
+Log ISE & Nivel & $-2.97$ & $-3.42$ & No & $0.629$ & $0.146$ & Sí \\
+ & Diferencia & $-9.76$ & $-2.87$ & Sí & $0.067$ & $0.463$ & No \\
+Inflación mensual & Nivel & $-2.23$ & $-2.87$ & No & $0.405$ & $0.463$ & No \\
+ & Diferencia & $-7.07$ & $-2.87$ & Sí & $0.015$ & $0.463$ & No \\
+Inflación mensual desest. & Nivel & $-3.82$ & $-2.87$ & Sí & $0.602$ & $0.463$ & Sí \\
+ & Diferencia & $-9.55$ & $-2.87$ & Sí & $0.020$ & $0.463$ & No \\
+Expectativas & Nivel & $-3.00$ & $-2.87$ & Sí & $0.539$ & $0.463$ & Sí \\
+ & Diferencia & $-7.32$ & $-2.87$ & Sí & $0.132$ & $0.463$ & No \\
+TPM & Nivel & $-2.59$ & $-2.87$ & No & $0.709$ & $0.463$ & Sí \\
+ & Diferencia & $-3.79$ & $-2.87$ & Sí & $0.188$ & $0.463$ & No \\
+Log ITCR & Nivel & $-1.79$ & $-3.42$ & No & $0.462$ & $0.146$ & Sí \\
+ & Diferencia & $-10.07$ & $-2.87$ & Sí & $0.149$ & $0.463$ & No \\
+Log Brent & Nivel & $-3.12$ & $-3.42$ & No & $0.251$ & $0.146$ & Sí \\
+ & Diferencia & $-10.92$ & $-2.87$ & Sí & $0.049$ & $0.463$ & No \\
+Tasa Fed & Nivel & $-2.48$ & $-2.87$ & No & $0.799$ & $0.463$ & Sí \\
+ & Diferencia & $-3.82$ & $-2.87$ & Sí & $0.185$ & $0.463$ & No \\
+\bottomrule
+\end{tabular}
+\notascuadro{\textit{Nota.} ADF: $H_0$ = raíz unitaria (rezagos por AIC, máximo 12). KPSS: $H_0$ = estacionariedad. En nivel, log ISE, log ITCR y log Brent con constante y tendencia; las demás con constante. Las diferencias, con constante. La inflación mensual desestacionalizada (desest.) es el residuo de regresarla en 11 dummies estacionales. Muestra 2005--2026. VC = valor crítico.}
+\end{table}

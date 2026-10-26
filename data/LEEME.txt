@@ -1,0 +1,91 @@
+Proyecto: efectos de un choque de política monetaria en Colombia (Macroeconometría, Equipo 1)
+
+CÓMO CORRERLO
+En RStudio, cambiar la línea setwd(...) de cada script por la ruta de la carpeta Colombia y correr en orden:
+  1. prog/01_datos.R                construye la base, gráfica de series, pruebas de raíz unitaria y de raíz unitaria estacional
+  2. prog/02_var.R                  selección de rezagos, VAR en forma reducida y diagnósticos
+  3. prog/03_comparacion.R          comparación de especificaciones (variables, dummies, rezagos, inflación anual o mensual)
+  4. prog/04_estructural.R          identificación estructural (siete propuestas), respuestas al impulso y bootstrap wild
+  5. prog/05_propuestas_P8_P9.R     P8 y P9: ceros más signos (y cota en la P9), inferencia bayesiana
+  6. prog/06_propuesta_P10.R        P10: identificación de la P9 con la forma reducida en niveles
+  7. prog/07_inferencia_P1.R        inferencia de la P1: bootstrap por bloques y corrección de sesgo
+  8. prog/08_figuras_inferencia_P1.R  figuras didácticas del documento de inferencia
+  9. prog/09_sesgo_P9_P10.R         sensibilidad de la P9 y la P10 a la corrección de sesgo
+ 10. prog/10_robustez_rezagos.R     la P1 con 4, 6 y 8 rezagos
+ 11. prog/11_cuadros_figuras.R      cuadros (cuadros/) y figuras de los Anexos A y C
+ 12. prog/12_sesgo_completo_P1.R    corrección de sesgo completa (bootstrap anidado) frente al atajo de 07; unos 17 minutos con 7 núcleos
+ 13. prog/13_cuadros_anexo_D.R      cuadros del Anexo D y figuras de bandas de la P1; corre después de 12
+Los scripts 05 a 13 traen el setwd(...) comentado o no lo usan: quitar el # y poner la ruta.
+Paquetes de R: readxl, urca y forecast (este último sólo para la prueba OCSB de 01_datos.R). 12 usa parallel, que viene con R.
+
+DATOS ORIGINALES (data/originales, sin modificar)
+- anex-ISE-9actividades-jul2026.xlsx: ISE desestacionalizado y corregido por calendario, 2015=100. DANE (anexo 9 actividades, 18 sep 2026). 2024 provisional; 2025-2026 preliminar.
+- IPC_DANE_mensual.csv: IPC total nacional, dic 2018=100. DANE, vía Banco de la República.
+- TPM_BanRep_diaria.csv: tasa de política monetaria, diaria. Banco de la República.
+- TRM_BanRep_diaria.csv: tasa representativa del mercado, diaria. Banco de la República (solo referencia).
+- ITCR_IPC_total_BanRep_mensual.csv: índice de tasa de cambio real según IPC, ponderaciones totales, 2010=100. Banco de la República.
+- EME_expectativas_inflacion_BanRep_mensual.csv: Encuesta Mensual de Expectativas de Analistas Económicos, inflación total a 12 y 24 meses (promedio, desviación estándar y mediana, en fracción). Extraído de la hoja INFLACION_TOTAL de https://suameca.banrep.gov.co/archivos/encuestas/encuesta_mensual_analistas_economicos/series_historicas.xlsx
+- CARTERA_BRUTA_ML_BanRep_mensual.csv: total cartera bruta con ajuste por titularización en moneda legal, miles de millones COP, saldo a fin de mes. Banco de la República con información de la Superintendencia Financiera.
+- FEDFUNDS_FRED_mensual.csv: tasa de fondos federales efectiva, promedio mensual. Reserva Federal (H.15), vía FRED.
+- BRENT_EIA_FRED_mensual.csv: precio spot del Brent, promedio mensual. EIA, vía FRED.
+
+BASES GENERADAS (data)
+- colombia_mensual.csv: todas las series en nivel y transformadas, ene 2005 - jul 2026 (259 meses).
+- colombia_var.csv: variables endógenas del VAR, en orden: d_log_ise, inflacion_mensual, exp_inflacion_12m, tpm, d_log_itcr.
+- colombia_exogenas.csv: exógenas (d_log_brent y fed, en t y t-1), dummies estacionales (est02 a est12) y dummies de impulso.
+- raices_unitarias.csv: pruebas ADF y KPSS.
+- raices_estacionales.csv: pruebas de raíz unitaria estacional, OCSB (sobre 100 x log IPC) y Canova-Hansen (sobre la inflación mensual).
+- var_reducido.rds: VAR estimado (coeficientes, sigma, residuos, datos y función para reestimar). Se carga con readRDS.
+- var_criterios_rezagos.csv, var_coeficientes.csv, var_sigma.csv, var_residuos.csv: resultados del VAR principal.
+- comparacion_especificaciones.csv: diagnósticos de todas las especificaciones comparadas.
+- comparacion_inflacion.csv: la especificación principal con inflación anual o mensual, de 4 a 12 rezagos.
+- H_propuesta1.csv: matriz de impacto estructural H de la Propuesta 1 (Bjørnland).
+- identificacion_resumen_25pb.csv: respuestas a un alza de 25 pb en la TPM, por propuesta (* = banda al 90% excluye cero).
+- identificacion_25pb.rds: matrices H, respuestas, bandas de bootstrap, resúmenes de las propuestas con signos y la función identificar_exacta().
+- P8_P9*, P9_vs_P1_25pb.csv, P10*: resultados de 05 y 06.
+- P1_inferencia.rds, P1_bandas_25pb.csv: inferencia de la P1 (07).
+- P9_P10_sesgo.rds: 09. P1_robustez_rezagos*: 10. P1_sesgo_completo.rds, P1_bandas_sesgo_completo_25pb.csv: 12.
+
+TRANSFORMACIONES (variables x100 en logaritmos, en porcentaje)
+- d_log_ise: 100 x (log ISE_t - log ISE_t-1).
+- inflacion_mensual: 100 x (log IPC_t - log IPC_t-1). Es la que entra al VAR. Como el IPC no está desestacionalizado,
+  el VAR lleva 11 dummies estacionales. Las pruebas de 01_datos.R indican estacionalidad determinística (OCSB rechaza
+  la raíz unitaria estacional; Canova-Hansen no rechaza la estacionalidad estable), el caso en que Kilian y Lütkepohl
+  (sección 19.2) recomiendan dummies y no la diferencia de 12 meses.
+- inflacion_anual: 100 x (log IPC_t - log IPC_t-12). Sólo como referencia y para comparar (03_comparacion.R).
+  Las respuestas al impulso de la inflación se presentan como inflación anual: suma de 12 meses de la respuesta mensual.
+- exp_inflacion_12m: 100 x mediana de la expectativa de inflación a 12 meses (EME).
+- tpm: promedio mensual de la serie diaria, en nivel.
+- d_log_itcr: 100 x (log ITCR_t - log ITCR_t-1). Si sube, depreciación real del peso.
+- d_log_brent: 100 x (log Brent_t - log Brent_t-1); fed en nivel; ambas también rezagadas un mes.
+- est02 a est12: 1 en el mes indicado (febrero a diciembre) y 0 en los demás; enero queda en la constante.
+- credito_real_anual: 100 x (log(cartera/IPC)_t - log(cartera/IPC)_t-12). No entra al VAR principal.
+- Las series se transforman sobre la base completa y después se recorta la muestra.
+
+ESPECIFICACIÓN PRINCIPAL
+- VAR con 5 endógenas y 6 rezagos; constante, 11 dummies estacionales, exógenas y dummies de impulso.
+- Rezagos: el AIC elige 5 (pmax = 12, muestra común), HQ 4 y BIC 1. Se toma el AIC como piso y se agrega un rezago,
+  como recomienda Kilian y Lütkepohl para respuestas al impulso y restricciones de largo plazo (pp. 59-61, sección 11.4.1).
+  4 y 8 rezagos quedan como robustez (10_robustez_rezagos.R).
+- Muestra de estimación: ene 2010 - jul 2026 (199 meses); 2009 solo como rezagos iniciales.
+- Dummies de impulso: cada mes de mar a dic 2020 (pandemia) y may 2021 (paro nacional).
+
+IDENTIFICACIÓN (Propuesta 1, corto + largo plazo, Bjørnland 2009)
+- 9 ceros de impacto: ISE, inflación y expectativas no responden en el mes a los choques posteriores en el orden; TPM e ITCR interactúan libremente.
+- Neutralidad de largo plazo: el choque monetario no cambia el nivel del ITCR.
+- Choque normalizado a un alza de 25 pb en la TPM (línea choque_pp en 04_estructural.R).
+- Bandas: bootstrap wild recursivo en 04 (1,000 réplicas); bootstrap por bloques de 12 meses y corrección de sesgo en 07
+  (atajo de Kilian: el mismo sesgo para todas las réplicas); corrección completa, con el sesgo de cada réplica, en 11.
+
+SALIDAS
+- figuras/series_colombia.png: series en nivel y transformadas.
+- figuras/irf_propuesta1_25pb.png: respuestas al choque monetario, Propuesta 1, con bandas.
+- figuras/irf_p1_vs_p2_25pb.png: Propuesta 1 frente a Propuesta 2.
+- figuras/irf_propuesta5_25pb.png: Propuesta 5 (signos) frente a Propuesta 1.
+- figuras/irf_P8_vs_P9_1de.png, irf_P9_vs_P1_25pb.png, irf_P9_25pb.png: 05.
+- figuras/irf_P10_25pb.png, irf_P10_vs_P9_25pb.png, irf_P10_largo_25pb.png: 06.
+- figuras/irf_P1_bloques_25pb.png, irf_P1_sesgo_25pb.png, P1_residuos_ARCH.png, P1_bootstrap_distribuciones.png: 07.
+- figuras/P1_*.png restantes: 08. figuras/P9_P10_sesgo.png: 09. figuras/irf_P1_rezagos_25pb.png: 10.
+- figuras/irf_P1_sesgo_completo_25pb.png: 12.
+- figuras/irf_P1_bloques_solo_25pb.png, figuras/irf_P1_metodos_25pb.png: 13.
+- log/: todo lo que imprimen los scripts, incluidas las pruebas.

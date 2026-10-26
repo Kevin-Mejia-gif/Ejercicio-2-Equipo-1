@@ -1,0 +1,77 @@
+Construcción de la base: 2026-10-25 19:50:38 
+
+Muestra: 2005-01-01 a 2026-07-01 - 259 meses
+Faltantes en las variables del VAR y externas:
+        d_log_ise inflacion_mensual exp_inflacion_12m               tpm 
+                1                 0                 0                 0 
+       d_log_itcr       d_log_brent    d_log_brent_l1               fed 
+                0                 0                 0                 0 
+           fed_l1 
+                0 
+
+Pruebas de raíz unitaria (valores críticos al 5%):
+              serie     transformacion       deterministicos adf_estadistico
+            log_ise              nivel constante y tendencia           -2.97
+            log_ise primera diferencia             constante           -9.76
+  inflacion_mensual              nivel             constante           -2.23
+  inflacion_mensual primera diferencia             constante           -7.07
+    inflacion_anual              nivel             constante           -2.17
+    inflacion_anual primera diferencia             constante           -4.42
+  exp_inflacion_12m              nivel             constante           -3.00
+  exp_inflacion_12m primera diferencia             constante           -7.32
+ credito_real_anual              nivel             constante           -1.31
+ credito_real_anual primera diferencia             constante           -5.06
+                tpm              nivel             constante           -2.59
+                tpm primera diferencia             constante           -3.79
+           log_itcr              nivel constante y tendencia           -1.79
+           log_itcr primera diferencia             constante          -10.07
+          log_brent              nivel constante y tendencia           -3.12
+          log_brent primera diferencia             constante          -10.92
+                fed              nivel             constante           -2.48
+                fed primera diferencia             constante           -3.82
+ adf_critico_5 adf_rechaza_raiz kpss_estadistico kpss_critico_5
+         -3.42            FALSE            0.629          0.146
+         -2.87             TRUE            0.067          0.463
+         -2.87            FALSE            0.405          0.463
+         -2.87             TRUE            0.015          0.463
+         -2.87            FALSE            0.690          0.463
+         -2.87             TRUE            0.068          0.463
+         -2.87             TRUE            0.539          0.463
+         -2.87             TRUE            0.132          0.463
+         -2.87            FALSE            2.673          0.463
+         -2.87             TRUE            0.082          0.463
+         -2.87            FALSE            0.709          0.463
+         -2.87             TRUE            0.188          0.463
+         -3.42            FALSE            0.462          0.146
+         -2.87             TRUE            0.149          0.463
+         -3.42            FALSE            0.251          0.146
+         -2.87             TRUE            0.049          0.463
+         -2.87            FALSE            0.799          0.463
+         -2.87             TRUE            0.185          0.463
+ kpss_rechaza_estacionariedad
+                         TRUE
+                        FALSE
+                        FALSE
+                        FALSE
+                         TRUE
+                        FALSE
+                         TRUE
+                        FALSE
+                         TRUE
+                        FALSE
+                         TRUE
+                        FALSE
+                         TRUE
+                        FALSE
+                         TRUE
+                        FALSE
+                         TRUE
+                        FALSE
+
+Pruebas de raíz unitaria estacional (OCSB sobre 100 x log IPC; Canova-Hansen sobre la inflación mensual):
+   muestra ocsb_estadistico ocsb_critico_5 ocsb_rechaza_raiz_estacional
+ 2005-2026            -8.25           -1.8                         TRUE
+ 2009-2026            -7.40           -1.8                         TRUE
+ ch_estadistico ch_critico_5 ch_rechaza_estacionalidad_estable
+           1.76         2.71                             FALSE
+           1.61         2.71                             FALSE

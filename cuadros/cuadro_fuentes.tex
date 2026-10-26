@@ -1,0 +1,20 @@
+\begin{table}[H]
+\centering
+\caption{Series utilizadas y fuentes oficiales}
+\label{tab:fuentes}
+\small
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}p{3.4cm} >{\raggedright\arraybackslash}p{1.9cm} >{\raggedright\arraybackslash}p{3.0cm}@{}}
+\toprule
+Serie & Fuente & Frecuencia original & Cobertura descargada \\
+\midrule
+ISE desestacionalizado y corregido por efecto calendario (2015 = 100) & DANE & Mensual & ene 2005 -- jul 2026 \\
+IPC total nacional (dic 2018 = 100) & DANE, vía Banco de la República & Mensual & jul 1954 -- sep 2026 \\
+Expectativa de inflación a 12 meses, mediana (Encuesta Mensual de Expectativas) & Banco de la República & Mensual & sep 2003 -- sep 2026 \\
+Tasa de política monetaria & Banco de la República & Diaria & feb 1998 -- oct 2026 \\
+ITCR según IPC, ponderaciones totales (2010 = 100) & Banco de la República & Mensual & dic 1986 -- ago 2026 \\
+Tasa de fondos federales efectiva & Reserva Federal (H.15), vía FRED & Mensual & ene 2000 -- sep 2026 \\
+Precio spot del Brent & EIA, vía FRED & Mensual & ene 2000 -- sep 2026 \\
+\bottomrule
+\end{tabularx}
+\notascuadro{\textit{Nota.} Las series originales se conservan sin modificar en \texttt{data/originales/}. El ISE de 2024 es provisional y el de 2025--2026 preliminar. Las ponderaciones de los últimos meses del ITCR son estimaciones del Banco de la República.}
+\end{table}

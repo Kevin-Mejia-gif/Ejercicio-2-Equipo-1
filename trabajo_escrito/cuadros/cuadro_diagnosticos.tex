@@ -1,0 +1,26 @@
+\begin{table}[H]
+\centering
+\caption{Diagnósticos del VAR según el número de rezagos}
+\label{tab:diagnosticos}
+\footnotesize
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{4.2cm}>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X>{\centering\arraybackslash}X@{}}
+\toprule
+Prueba & 4 rezagos & 5 rezagos & 6 rezagos & 8 rezagos \\
+\midrule
+Raíz más grande (módulo) & $0.949$ & $0.946$ & $0.949$ & $0.925$ \\
+Portmanteau, $h = 12$ ($p$) & $0.002$ & $0.001$ & $0.000$ & $0.000$ \\
+Portmanteau, $h = 24$ ($p$) & $0.233$ & $0.238$ & $0.131$ & $0.003$ \\
+LM, orden 1 ($p$) & $0.000$ & $0.090$ & $0.242$ & $0.160$ \\
+LM, orden 12 ($p$) & $0.002$ & $0.017$ & $0.004$ & $0.001$ \\
+Ljung-Box (12), ISE ($p$) & $0.284$ & $0.230$ & $0.379$ & $0.332$ \\
+Ljung-Box (12), Inflación ($p$) & $0.741$ & $0.728$ & $0.778$ & $0.309$ \\
+Ljung-Box (12), Expectativas ($p$) & $0.912$ & $0.935$ & $0.746$ & $0.762$ \\
+Ljung-Box (12), TPM ($p$) & $0.382$ & $0.575$ & $0.693$ & $0.787$ \\
+Ljung-Box (12), ITCR ($p$) & $0.754$ & $0.837$ & $0.929$ & $0.980$ \\
+Jarque-Bera: rechazan & Inflación, Expectativas, TPM & ISE, Inflación, Expectativas, TPM & ISE, Inflación, Expectativas & ISE, Expectativas \\
+ARCH-LM (12): rechazan & ISE, TPM, ITCR & ISE, TPM & ISE, TPM & ISE, TPM \\
+F estacionales: rechazan & Inflación, ITCR & Inflación, ITCR & Inflación & Inflación \\
+\bottomrule
+\end{tabularx}
+\notascuadro{Fuente: Elaboración propia con datos de DANE y Banco de la República.}
+\end{table}

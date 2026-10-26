@@ -1,0 +1,21 @@
+\begin{table}[H]
+\centering
+\caption{VAR con inflación anual frente a inflación mensual}
+\label{tab:inflacion_anual_mensual}
+\small
+\begin{tabular}{@{}crrrrrr@{}}
+\toprule
+ & \multicolumn{3}{c}{Inflación anual} & \multicolumn{3}{c}{Inflación mensual} \\
+\cmidrule(lr){2-4}\cmidrule(l){5-7}
+Rezagos & Raíz & Cond. & Portm. $h=24$ & Raíz & Cond. & Portm. $h=24$ \\
+\midrule
+4 & $0.941$ & $115$ & $0.665$ & $0.949$ & $98$ & $0.233$ \\
+5 & $0.952$ & $232$ & $0.480$ & $0.946$ & $120$ & $0.238$ \\
+6$^{*}$ & $1.000$ & $12154$ & $0.324$ & $0.949$ & $136$ & $0.131$ \\
+8 & $1.010$ & $490$ & $0.035$ & $0.925$ & $158$ & $0.003$ \\
+10 & $1.020$ & $221$ & $0.000$ & $0.967$ & $125$ & $0.000$ \\
+12 & $1.028$ & $105$ & $0.000$ & $0.965$ & $94$ & $0.000$ \\
+\bottomrule
+\end{tabular}
+\notascuadro{\textit{Nota.} Mismas variables, muestra, exógenas y dummies puntuales; solo cambia cómo entra la inflación (la mensual, con dummies estacionales). Raíz: módulo de la raíz más grande; un valor de 1 o mayor indica un VAR no estable. Cond.: número de condición de $I - A(1)$. Portm.: $p$-valor de la prueba Portmanteau ajustada a 24 meses. $^{*}$Especificación elegida. Fuente: \texttt{prog/03\_comparacion.R}.}
+\end{table}

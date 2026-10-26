@@ -1,0 +1,48 @@
+Corrección de sesgo completa para la Propuesta 1: 2026-10-25 01:01:59 
+
+Comprobaciones: simulación rápida frente a la de 07, diferencia máxima 5.2e-14; P1 corregida frente a 07, 0.0e+00
+
+Etapa 2: 2000 réplicas x 500 anidadas en 16.3 minutos con 7 núcleos. Réplicas con VAR estable: 1994
+
+Cuadro 1. Respuesta a un alza de 25 pb: estimación y bandas de 68% (variable_mes)
+bloques_07: sin corrección | atajo_07: corrección de 07 | atajo_12 y completo_12: este programa, mismas réplicas
+               Estimacion Estimacion_corregida bloques_07     atajo_07      
+ITCR_0         -0.06      +0.15                [-1.29, +0.81] [-1.44, +1.73]
+ITCR_3         +0.06      +0.29                [-0.97, +0.77] [-1.40, +1.91]
+ITCR_12        -0.56      -0.60                [-1.03, +0.04] [-2.20, +1.11]
+Inflacion_12   -0.07      -0.09                [-0.26, +0.14] [-0.38, +0.16]
+Inflacion_24   -0.12      -0.12                [-0.23, -0.02] [-0.34, +0.07]
+Expectativas_6 +0.03      +0.02                [-0.02, +0.08] [-0.06, +0.09]
+ISE_12         -0.47      -0.55                [-0.62, -0.21] [-0.87, -0.27]
+ISE_24         -0.65      -0.77                [-0.82, -0.32] [-1.17, -0.44]
+ISE_36         -0.63      -0.76                [-0.80, -0.26] [-1.19, -0.41]
+               atajo_12       completo_12   
+ITCR_0         [-1.23, +1.90] [-1.37, +1.35]
+ITCR_3         [-1.24, +2.10] [-1.38, +1.43]
+ITCR_12        [-2.24, +1.28] [-2.08, +0.56]
+Inflacion_12   [-0.36, +0.18] [-0.40, +0.15]
+Inflacion_24   [-0.33, +0.09] [-0.36, +0.04]
+Expectativas_6 [-0.06, +0.08] [-0.04, +0.09]
+ISE_12         [-0.88, -0.25] [-0.87, -0.28]
+ISE_24         [-1.20, -0.42] [-1.18, -0.45]
+ISE_36         [-1.23, -0.41] [-1.19, -0.39]
+
+Cuadro 2. Ángulo de la P1 y réplicas que deprecian al impacto (estimación: 5.9 grados; corregida: 9.4)
+            angulo_p16 angulo_p50 angulo_p84 deprecian
+bloques_07       -12.3        4.2       20.2      0.40
+atajo_07         -14.3       10.6       33.0      0.56
+atajo_12         -11.6       11.1       35.1      0.56
+completo_12      -13.3        7.9       27.7      0.49
+ISE a 24 meses < 0: atajo_12 97% de las réplicas, completo_12 98%
+
+Cuadro 3. Sesgo de la suma de coeficientes propios: etapa 1 (el que usa el atajo) frente al de cada réplica
+ISE           etapa 1 -0.023 | réplicas: p16 -0.175, mediana -0.104, p84 -0.029
+Inflación    etapa 1 -0.039 | réplicas: p16 -0.089, mediana -0.055, p84 -0.023
+Expectativas  etapa 1 -0.028 | réplicas: p16 -0.028, mediana -0.017, p84 -0.008
+TPM           etapa 1 -0.006 | réplicas: p16 -0.007, mediana -0.005, p84 -0.002
+ITCR          etapa 1 -0.129 | réplicas: p16 -0.171, mediana -0.121, p84 -0.071
+
+Raíz más grande: MCO 0.949, corregida 0.955. En las réplicas, mediana (p84): sin corregir 0.962 (0.976), atajo 0.974 (0.994), completo 0.971 (0.989)
+Réplicas en que el ajuste de estacionariedad encoge el sesgo: atajo 11%, completo 8%
+
+Listo: figuras/irf_P1_sesgo_completo_25pb.png; data/P1_sesgo_completo.rds y data/P1_bandas_sesgo_completo_25pb.csv

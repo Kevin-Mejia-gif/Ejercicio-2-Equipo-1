@@ -1,0 +1,344 @@
+Comparación de especificaciones: 2026-10-25 19:50:45 
+
+Muestra de estimación desde 2010-01 
+cond_largo_plazo: número de condición de (I - A1 - ... - Ap); valores altos indican que C(1) es imprecisa
+
+       variables                 dummies K  p elegido_por n_obs par_ecuacion
+            base            mar-jun 2020 4  1         BIC   199           24
+            base            mar-jun 2020 4  4          HQ   199           36
+            base            mar-jun 2020 4  6        fijo   199           44
+            base            mar-jun 2020 4 11         AIC   199           64
+            base mar-jun 2020 + may 2021 4  1         BIC   199           25
+            base mar-jun 2020 + may 2021 4  4      AIC/HQ   199           37
+            base mar-jun 2020 + may 2021 4  6        fijo   199           45
+            base            mar-dic 2020 4  1         BIC   199           30
+            base            mar-dic 2020 4  4          HQ   199           42
+            base            mar-dic 2020 4  5         AIC   199           46
+            base            mar-dic 2020 4  6        fijo   199           50
+            base mar-dic 2020 + may 2021 4  1         BIC   199           31
+            base mar-dic 2020 + may 2021 4  4          HQ   199           43
+            base mar-dic 2020 + may 2021 4  5         AIC   199           47
+            base mar-dic 2020 + may 2021 4  6        fijo   199           51
+    expectativas            mar-jun 2020 5  1         BIC   199           25
+    expectativas            mar-jun 2020 5  4      AIC/HQ   199           40
+    expectativas            mar-jun 2020 5  6        fijo   199           50
+    expectativas mar-jun 2020 + may 2021 5  1         BIC   199           26
+    expectativas mar-jun 2020 + may 2021 5  4      AIC/HQ   199           41
+    expectativas mar-jun 2020 + may 2021 5  6        fijo   199           51
+    expectativas            mar-dic 2020 5  1         BIC   199           31
+    expectativas            mar-dic 2020 5  4          HQ   199           46
+    expectativas            mar-dic 2020 5  5         AIC   199           51
+    expectativas            mar-dic 2020 5  6        fijo   199           56
+    expectativas mar-dic 2020 + may 2021 5  1         BIC   199           32
+    expectativas mar-dic 2020 + may 2021 5  4          HQ   199           47
+    expectativas mar-dic 2020 + may 2021 5  5         AIC   199           52
+    expectativas mar-dic 2020 + may 2021 5  6        fijo   199           57
+         credito            mar-jun 2020 5  1         BIC   199           25
+         credito            mar-jun 2020 5  2          HQ   199           30
+         credito            mar-jun 2020 5  4         AIC   199           40
+         credito            mar-jun 2020 5  6        fijo   199           50
+         credito mar-jun 2020 + may 2021 5  1         BIC   199           26
+         credito mar-jun 2020 + may 2021 5  2          HQ   199           31
+         credito mar-jun 2020 + may 2021 5  4         AIC   199           41
+         credito mar-jun 2020 + may 2021 5  6        fijo   199           51
+         credito            mar-dic 2020 5  1         BIC   199           31
+         credito            mar-dic 2020 5  2          HQ   199           36
+         credito            mar-dic 2020 5  4         AIC   199           46
+         credito            mar-dic 2020 5  6        fijo   199           56
+         credito mar-dic 2020 + may 2021 5  1         BIC   199           32
+         credito mar-dic 2020 + may 2021 5  2          HQ   199           37
+         credito mar-dic 2020 + may 2021 5  4         AIC   199           47
+         credito mar-dic 2020 + may 2021 5  6        fijo   199           57
+     credito_dif            mar-jun 2020 5  1      HQ/BIC   199           25
+     credito_dif            mar-jun 2020 5  6        fijo   199           50
+     credito_dif            mar-jun 2020 5 12         AIC   199           80
+     credito_dif mar-jun 2020 + may 2021 5  1      HQ/BIC   199           26
+     credito_dif mar-jun 2020 + may 2021 5  6        fijo   199           51
+     credito_dif mar-jun 2020 + may 2021 5 12         AIC   199           81
+     credito_dif            mar-dic 2020 5  1         BIC   199           31
+     credito_dif            mar-dic 2020 5  2          HQ   199           36
+     credito_dif            mar-dic 2020 5  6        fijo   199           56
+     credito_dif            mar-dic 2020 5 12         AIC   199           86
+     credito_dif mar-dic 2020 + may 2021 5  1         BIC   199           32
+     credito_dif mar-dic 2020 + may 2021 5  2          HQ   199           37
+     credito_dif mar-dic 2020 + may 2021 5  6        fijo   199           57
+     credito_dif mar-dic 2020 + may 2021 5 12         AIC   199           87
+     exp_credito            mar-jun 2020 6  1      HQ/BIC   199           26
+     exp_credito            mar-jun 2020 6  4         AIC   199           44
+     exp_credito            mar-jun 2020 6  6        fijo   199           56
+     exp_credito mar-jun 2020 + may 2021 6  1      HQ/BIC   199           27
+     exp_credito mar-jun 2020 + may 2021 6  4         AIC   199           45
+     exp_credito mar-jun 2020 + may 2021 6  6        fijo   199           57
+     exp_credito            mar-dic 2020 6  1         BIC   199           32
+     exp_credito            mar-dic 2020 6  2          HQ   199           38
+     exp_credito            mar-dic 2020 6  4         AIC   199           50
+     exp_credito            mar-dic 2020 6  6        fijo   199           62
+     exp_credito mar-dic 2020 + may 2021 6  1         BIC   199           33
+     exp_credito mar-dic 2020 + may 2021 6  2          HQ   199           39
+     exp_credito mar-dic 2020 + may 2021 6  4         AIC   199           51
+     exp_credito mar-dic 2020 + may 2021 6  6        fijo   199           63
+ exp_credito_dif            mar-jun 2020 6  1      HQ/BIC   199           26
+ exp_credito_dif            mar-jun 2020 6  4         AIC   199           44
+ exp_credito_dif            mar-jun 2020 6  6        fijo   199           56
+ exp_credito_dif mar-jun 2020 + may 2021 6  1      HQ/BIC   199           27
+ exp_credito_dif mar-jun 2020 + may 2021 6  4         AIC   199           45
+ exp_credito_dif mar-jun 2020 + may 2021 6  6        fijo   199           57
+ exp_credito_dif            mar-dic 2020 6  1      HQ/BIC   199           32
+ exp_credito_dif            mar-dic 2020 6  4         AIC   199           50
+ exp_credito_dif            mar-dic 2020 6  6        fijo   199           62
+ exp_credito_dif mar-dic 2020 + may 2021 6  1         BIC   199           33
+ exp_credito_dif mar-dic 2020 + may 2021 6  2          HQ   199           39
+ exp_credito_dif mar-dic 2020 + may 2021 6  4         AIC   199           51
+ exp_credito_dif mar-dic 2020 + may 2021 6  6        fijo   199           63
+ raiz_max cond_largo_plazo portmanteau_h12 portmanteau_h24 lb_rechazos lb_min
+   0.9892            211.1           0.000           0.000           2  0.000
+   0.9624             60.8           0.064           0.165           0  0.605
+   0.9542             82.0           0.001           0.057           0  0.313
+   0.9454            142.6           0.000           0.000           0  0.078
+   0.9929            337.2           0.000           0.000           2  0.000
+   0.9612             62.7           0.020           0.098           0  0.115
+   0.9488             92.9           0.000           0.008           1  0.002
+   0.9850            173.0           0.000           0.000           2  0.000
+   0.9652             70.4           0.153           0.391           0  0.428
+   0.9567             91.0           0.221           0.417           0  0.487
+   0.9550            103.5           0.087           0.327           0  0.637
+   0.9889            248.2           0.000           0.000           2  0.000
+   0.9638             71.7           0.019           0.221           0  0.274
+   0.9548             95.7           0.013           0.220           0  0.135
+   0.9524            107.8           0.002           0.111           0  0.179
+   0.9611             66.0           0.000           0.000           3  0.000
+   0.9466             86.7           0.017           0.215           0  0.330
+   0.9486            105.0           0.000           0.054           0  0.355
+   0.9606             72.7           0.000           0.000           3  0.000
+   0.9442             92.2           0.003           0.123           0  0.150
+   0.9451            114.5           0.000           0.014           1  0.003
+   0.9602             65.9           0.000           0.000           3  0.000
+   0.9520             96.6           0.043           0.435           0  0.353
+   0.9484            116.0           0.038           0.400           0  0.497
+   0.9495            131.5           0.009           0.248           0  0.626
+   0.9596             73.2           0.000           0.000           3  0.000
+   0.9494             98.2           0.002           0.233           0  0.284
+   0.9463            120.1           0.001           0.238           0  0.230
+   0.9486            135.8           0.000           0.131           0  0.379
+   0.9844            127.8           0.000           0.000           3  0.000
+   0.9663            217.4           0.000           0.000           2  0.000
+   0.9441            132.1           0.001           0.041           1  0.000
+   0.9550            195.4           0.000           0.002           1  0.002
+   0.9845            117.1           0.000           0.000           3  0.000
+   0.9685            207.6           0.000           0.000           2  0.000
+   0.9402            131.4           0.000           0.022           1  0.000
+   0.9602            207.1           0.000           0.000           2  0.004
+   0.9802            147.1           0.000           0.000           3  0.000
+   0.9632            293.3           0.000           0.000           2  0.000
+   0.9362            185.7           0.020           0.227           1  0.001
+   0.9523            257.9           0.001           0.019           1  0.005
+   0.9801            134.1           0.000           0.000           3  0.000
+   0.9652            275.8           0.000           0.000           2  0.000
+   0.9387            185.8           0.001           0.099           1  0.002
+   0.9589            254.3           0.000           0.003           1  0.005
+   0.9866            188.6           0.000           0.000           3  0.000
+   0.9498             90.4           0.000           0.008           1  0.043
+   0.9695            139.6           0.000           0.000           0  0.152
+   0.9907            286.5           0.000           0.000           3  0.000
+   0.9425            108.2           0.000           0.001           1  0.006
+   0.9628            135.3           0.000           0.000           1  0.008
+   0.9830            181.6           0.000           0.000           3  0.000
+   0.9625            163.8           0.000           0.000           2  0.000
+   0.9526            108.2           0.001           0.063           0  0.088
+   0.9653            132.6           0.000           0.000           0  0.564
+   0.9874            249.8           0.000           0.000           3  0.000
+   0.9695            192.1           0.000           0.000           2  0.000
+   0.9474            116.8           0.000           0.021           0  0.100
+   0.9688             87.6           0.000           0.000           0  0.184
+   0.9844            313.4           0.000           0.000           4  0.000
+   0.9366            183.1           0.002           0.176           1  0.000
+   0.9655            276.4           0.000           0.014           1  0.002
+   0.9782            251.6           0.000           0.000           4  0.000
+   0.9385            204.6           0.000           0.124           1  0.000
+   0.9713            299.3           0.000           0.003           2  0.005
+   0.9819            301.0           0.000           0.000           4  0.000
+   0.9783            321.4           0.000           0.001           2  0.000
+   0.9640            323.4           0.015           0.325           1  0.001
+   0.9758            462.1           0.000           0.017           1  0.005
+   0.9751            247.2           0.000           0.000           4  0.000
+   0.9749            296.5           0.000           0.001           2  0.000
+   0.9673            339.5           0.000           0.185           1  0.001
+   0.9795            472.1           0.000           0.006           1  0.005
+   0.9602             67.9           0.000           0.000           4  0.000
+   0.9427             89.7           0.002           0.209           1  0.001
+   0.9458            117.5           0.000           0.025           1  0.033
+   0.9596             73.4           0.000           0.000           4  0.000
+   0.9327            100.1           0.000           0.115           1  0.001
+   0.9412            135.6           0.000           0.005           2  0.021
+   0.9596             71.5           0.000           0.000           4  0.000
+   0.9436            103.3           0.024           0.399           1  0.002
+   0.9477            138.8           0.000           0.042           0  0.068
+   0.9590             76.9           0.000           0.000           4  0.000
+   0.9563             91.0           0.000           0.001           2  0.000
+   0.9290            112.4           0.001           0.203           1  0.002
+   0.9451            151.8           0.000           0.019           0  0.080
+ lb_inflacion jb_rechazos arch_rechazos sd_res_ise cor_tpm_itcr candidata
+        0.146           3             2      1.352       -0.009     FALSE
+        0.619           3             2      1.314       -0.072      TRUE
+        0.539           3             2      1.318       -0.102      TRUE
+        0.982           3             1      1.143       -0.065     FALSE
+        0.646           3             2      1.232       -0.008     FALSE
+        0.698           2             2      1.192       -0.071      TRUE
+        0.652           3             2      1.183       -0.101     FALSE
+        0.130           4             2      1.296       -0.006     FALSE
+        0.428           3             1      1.177       -0.070      TRUE
+        0.487           3             1      1.182       -0.097      TRUE
+        0.637           3             1      1.193       -0.101      TRUE
+        0.648           4             2      1.156       -0.005     FALSE
+        0.538           2             2      1.031       -0.070      TRUE
+        0.563           2             2      1.022       -0.096      TRUE
+        0.612           2             2      1.026       -0.100      TRUE
+        0.531           4             3      1.354        0.051     FALSE
+        0.790           4             2      1.312       -0.129      TRUE
+        0.823           4             2      1.313       -0.139      TRUE
+        0.915           4             2      1.233        0.054     FALSE
+        0.845           4             2      1.187       -0.127      TRUE
+        0.884           4             2      1.181       -0.133     FALSE
+        0.428           4             3      1.298        0.054     FALSE
+        0.582           4             2      1.181       -0.124      TRUE
+        0.688           4             1      1.185       -0.130      TRUE
+        0.805           4             1      1.195       -0.137      TRUE
+        0.899           4             3      1.156        0.056     FALSE
+        0.741           3             3      1.034       -0.123      TRUE
+        0.728           4             2      1.028       -0.123      TRUE
+        0.778           3             2      1.032       -0.130      TRUE
+        0.206           3             3      1.355       -0.006     FALSE
+        0.293           3             3      1.333        0.003     FALSE
+        0.708           3             3      1.330       -0.072     FALSE
+        0.714           3             3      1.342       -0.096     FALSE
+        0.668           4             3      1.229       -0.007     FALSE
+        0.380           2             2      1.203        0.001     FALSE
+        0.565           3             2      1.191       -0.076     FALSE
+        0.507           3             3      1.186       -0.101     FALSE
+        0.178           3             3      1.299        0.004     FALSE
+        0.170           4             2      1.184        0.001     FALSE
+        0.520           3             2      1.177       -0.058      TRUE
+        0.689           3             2      1.200       -0.077     FALSE
+        0.671           4             3      1.156        0.002     FALSE
+        0.273           2             2      1.034       -0.001     FALSE
+        0.381           2             2      1.033       -0.063      TRUE
+        0.412           2             3      1.039       -0.081     FALSE
+        0.100           3             3      1.355        0.005     FALSE
+        0.471           4             3      1.338       -0.096     FALSE
+        0.994           2             3      1.153       -0.061     FALSE
+        0.353           2             3      1.232        0.005     FALSE
+        0.435           3             3      1.190       -0.099     FALSE
+        0.562           1             2      1.090       -0.063     FALSE
+        0.102           4             3      1.296        0.011     FALSE
+        0.123           4             2      1.177       -0.005     FALSE
+        0.659           4             2      1.201       -0.078      TRUE
+        0.564           2             2      1.140       -0.056     FALSE
+        0.371           4             3      1.160        0.010     FALSE
+        0.179           3             3      1.039       -0.006     FALSE
+        0.455           2             3      1.038       -0.081     FALSE
+        0.184           1             2      1.015       -0.061     FALSE
+        0.665           5             4      1.357        0.054     FALSE
+        0.823           4             3      1.328       -0.114      TRUE
+        0.883           4             3      1.339       -0.125     FALSE
+        0.936           5             3      1.229        0.054     FALSE
+        0.737           4             3      1.192       -0.118      TRUE
+        0.782           4             3      1.191       -0.126     FALSE
+        0.535           5             4      1.301        0.064     FALSE
+        0.388           5             2      1.187        0.057     FALSE
+        0.623           4             3      1.180       -0.098      TRUE
+        0.852           3             2      1.202       -0.106     FALSE
+        0.919           5             4      1.156        0.063     FALSE
+        0.564           3             2      1.036        0.056     FALSE
+        0.581           3             4      1.038       -0.102      TRUE
+        0.668           2             3      1.047       -0.107     FALSE
+        0.363           4             3      1.358        0.070     FALSE
+        0.611           4             3      1.328       -0.120      TRUE
+        0.774           5             3      1.333       -0.126     FALSE
+        0.641           4             3      1.233        0.071     FALSE
+        0.611           3             3      1.196       -0.122      TRUE
+        0.793           5             3      1.193       -0.124     FALSE
+        0.279           5             4      1.297        0.077     FALSE
+        0.399           4             3      1.179       -0.103      TRUE
+        0.830           4             2      1.203       -0.108     FALSE
+        0.589           5             4      1.160        0.078     FALSE
+        0.377           4             2      1.040        0.050     FALSE
+        0.440           2             4      1.041       -0.105      TRUE
+        0.726           2             3      1.046       -0.106     FALSE
+
+Candidatas (raíz < 0.98 y Portmanteau h24 > 0.05):
+       variables                 dummies p elegido_por raiz_max
+            base            mar-jun 2020 4          HQ   0.9624
+            base            mar-jun 2020 6        fijo   0.9542
+            base mar-jun 2020 + may 2021 4      AIC/HQ   0.9612
+            base            mar-dic 2020 4          HQ   0.9652
+            base            mar-dic 2020 5         AIC   0.9567
+            base            mar-dic 2020 6        fijo   0.9550
+            base mar-dic 2020 + may 2021 4          HQ   0.9638
+            base mar-dic 2020 + may 2021 5         AIC   0.9548
+            base mar-dic 2020 + may 2021 6        fijo   0.9524
+    expectativas            mar-jun 2020 4      AIC/HQ   0.9466
+    expectativas            mar-jun 2020 6        fijo   0.9486
+    expectativas mar-jun 2020 + may 2021 4      AIC/HQ   0.9442
+    expectativas            mar-dic 2020 4          HQ   0.9520
+    expectativas            mar-dic 2020 5         AIC   0.9484
+    expectativas            mar-dic 2020 6        fijo   0.9495
+    expectativas mar-dic 2020 + may 2021 4          HQ   0.9494
+    expectativas mar-dic 2020 + may 2021 5         AIC   0.9463
+    expectativas mar-dic 2020 + may 2021 6        fijo   0.9486
+         credito            mar-dic 2020 4         AIC   0.9362
+         credito mar-dic 2020 + may 2021 4         AIC   0.9387
+     credito_dif            mar-dic 2020 6        fijo   0.9526
+     exp_credito            mar-jun 2020 4         AIC   0.9366
+     exp_credito mar-jun 2020 + may 2021 4         AIC   0.9385
+     exp_credito            mar-dic 2020 4         AIC   0.9640
+     exp_credito mar-dic 2020 + may 2021 4         AIC   0.9673
+ exp_credito_dif            mar-jun 2020 4         AIC   0.9427
+ exp_credito_dif mar-jun 2020 + may 2021 4         AIC   0.9327
+ exp_credito_dif            mar-dic 2020 4         AIC   0.9436
+ exp_credito_dif mar-dic 2020 + may 2021 4         AIC   0.9290
+ cond_largo_plazo portmanteau_h24 lb_rechazos lb_inflacion par_ecuacion
+             60.8           0.165           0        0.619           36
+             82.0           0.057           0        0.539           44
+             62.7           0.098           0        0.698           37
+             70.4           0.391           0        0.428           42
+             91.0           0.417           0        0.487           46
+            103.5           0.327           0        0.637           50
+             71.7           0.221           0        0.538           43
+             95.7           0.220           0        0.563           47
+            107.8           0.111           0        0.612           51
+             86.7           0.215           0        0.790           40
+            105.0           0.054           0        0.823           50
+             92.2           0.123           0        0.845           41
+             96.6           0.435           0        0.582           46
+            116.0           0.400           0        0.688           51
+            131.5           0.248           0        0.805           56
+             98.2           0.233           0        0.741           47
+            120.1           0.238           0        0.728           52
+            135.8           0.131           0        0.778           57
+            185.7           0.227           1        0.520           46
+            185.8           0.099           1        0.381           47
+            108.2           0.063           0        0.659           56
+            183.1           0.176           1        0.823           44
+            204.6           0.124           1        0.737           45
+            323.4           0.325           1        0.623           50
+            339.5           0.185           1        0.581           51
+             89.7           0.209           1        0.611           44
+            100.1           0.115           1        0.611           45
+            103.3           0.399           1        0.399           50
+            112.4           0.203           1        0.440           51
+
+Inflación anual (sin dummies estacionales) frente a mensual (con dummies estacionales), resto igual a la especificación principal
+raiz_max >= 1: VAR explosivo; lb12_inflacion: Ljung-Box a 12 rezagos de los residuos de la ecuación de inflación
+ inflacion  p raiz_max cond_largo_plazo portmanteau_h24 lb12_inflacion
+     anual  4    0.941            115.2           0.665          0.077
+     anual  5    0.952            232.4           0.480          0.205
+     anual  6    1.000          12154.5           0.324          0.203
+     anual  8    1.010            490.2           0.035          0.325
+     anual 10    1.020            221.3           0.000          0.165
+     anual 12    1.028            105.4           0.000          0.140
+   mensual  4    0.949             98.2           0.233          0.785
+   mensual  5    0.946            120.1           0.238          0.587
+   mensual  6    0.949            135.8           0.131          0.750
+   mensual  8    0.925            158.2           0.003          0.430
+   mensual 10    0.967            124.6           0.000          0.516
+   mensual 12    0.965             94.4           0.000          0.475

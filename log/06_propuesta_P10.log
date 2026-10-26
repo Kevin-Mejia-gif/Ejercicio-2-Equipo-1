@@ -1,0 +1,53 @@
+Propuesta 10 con nuestra forma reducida inicial: 2026-10-25 19:51:31 
+
+Muestra: 2006-01 a 2026-07, n = 247 meses, 86 regresores por ecuación; raíz más grande 0.998
+
+Sorteos: 2000 de la forma reducida x 40 ángulos = 80000 candidatos
+P10: 13548 aceptados (17%); ángulo mediano -12 grados [p16 -22, p84 -1]; apreciación de impacto mediana 4.9% por pp
+De los aceptados, 2704 (20%) vienen de un VAR estable; sólo esos se usan para el horizonte largo.
+
+Cuadro 1. Mediana posterior, choque de 1 d.e. (ISE, IPC y TRM en nivel, %; inflación anual, expectativas y TPM en pp)
+ Propuesta ISE_0 ISE_12 ISE_24 Inflacion_0 Inflacion_12 Inflacion_24
+       P10  0.00  -0.12  -0.17        0.00        -0.10        -0.26
+ Expectativas_0 Expectativas_12 Expectativas_24 TRM_0 TRM_12 TRM_24 TPM_0
+           0.00           -0.02           -0.08 -0.79  -1.31  -1.54  0.16
+ P(ISE_24<0) P(IPC_24<0)
+        0.90        0.92
+
+Cuadro 2. Alza de 25 pb en la TPM (P10 y P9: mediana; P1: estimación puntual)
+ Horizonte Propuesta   ISE Inflacion Expectativas TC_real
+         0       P10  0.00      0.00         0.00   -1.23
+         0        P9  0.00      0.00         0.00   -1.29
+         0        P1  0.00     -0.00         0.00   -0.06
+        12       P10 -0.19     -0.16        -0.03   -1.90
+        12        P9 -0.52     -0.20        -0.01   -2.12
+        12        P1 -0.47     -0.07         0.00   -0.56
+        24       P10 -0.27     -0.41        -0.13   -1.84
+        24        P9 -0.69     -0.17        -0.05   -1.74
+        24        P1 -0.65     -0.12        -0.04   -0.36
+En la P10, la TRM nominal se mueve -1.23% en el impacto, -2.06% a los 12 meses y -2.41% a los 24.
+
+Cuadro 3. ¿Regresan a cero? Respuesta a un alza de 25 pb a 2, 4, 5, 10 y 20 años: mediana [p16, p84], sólo sorteos con VAR estable
+     Variable              2_anios              4_anios              5_anios
+          ISE -0.25 [-0.44, -0.04]  -0.08 [-0.26, 0.11]  -0.16 [-0.35, 0.01]
+          IPC -0.48 [-0.90, -0.12] -0.66 [-1.29, -0.25] -0.56 [-1.26, -0.19]
+          TPM  -0.20 [-0.43, 0.01]  -0.04 [-0.22, 0.13]   0.04 [-0.10, 0.21]
+          TRM -1.84 [-3.35, -0.62]  -0.72 [-2.10, 0.16]  -0.42 [-1.87, 0.31]
+     TRM_real -1.37 [-2.60, -0.35]  -0.19 [-1.16, 0.76]   0.04 [-0.88, 0.87]
+ Expectativas -0.10 [-0.21, -0.00]  -0.02 [-0.12, 0.05]   0.00 [-0.07, 0.07]
+             10_anios             20_anios
+ -0.31 [-0.70, -0.11] -0.19 [-0.45, -0.07]
+ -0.31 [-0.91, -0.06] -0.25 [-0.68, -0.06]
+   0.01 [-0.07, 0.12]   0.00 [-0.05, 0.04]
+  -0.14 [-0.80, 0.59]  -0.14 [-0.60, 0.15]
+   0.15 [-0.31, 1.12]   0.13 [-0.12, 0.52]
+   0.01 [-0.03, 0.07]   0.00 [-0.02, 0.03]
+
+Cuadro 3b. Lo mismo con la estimación puntual (raíz más grande 0.998) y el ángulo mediano (-12 grados)
+     Variable 2_anios 4_anios 5_anios 10_anios 20_anios
+          ISE   -0.28   -0.03   -0.11    -0.54    -0.27
+          IPC   -0.60   -1.07   -1.05     0.05    -0.50
+          TPM   -0.25   -0.13    0.00     0.14     0.09
+          TRM   -2.52   -1.45   -0.78     1.02     0.62
+     TRM_real   -1.92   -0.38    0.27     0.97     1.12
+ Expectativas   -0.14   -0.07   -0.02     0.09     0.05

@@ -1,0 +1,39 @@
+Identificación estructural: 2026-10-25 19:50:47 
+
+Verificación de las propuestas exactas:
+  P1: max|HH' - Sigma| = 1.8e-15 | largo plazo ITCR-choque 4 = 2.1e-17 | largo plazo ISE-choque 4 = -3.9e-01
+  P2: max|HH' - Sigma| = 1.8e-15 | largo plazo ITCR-choque 4 = 3.1e-16 | largo plazo ISE-choque 4 = 2.6e-16
+  P3: max|HH' - Sigma| = 6.7e-16 | largo plazo ITCR-choque 4 = 2.1e-17 | largo plazo ISE-choque 4 = -3.9e-01
+  P4: max|HH' - Sigma| = 8.9e-16 | largo plazo ITCR-choque 4 = 3.1e-16 | largo plazo ISE-choque 4 = 2.6e-16
+
+P3 vs P1, máxima diferencia en el choque monetario: 0.0e+00
+P4 vs P2, máxima diferencia en el choque monetario: 0.0e+00
+
+Matriz de impacto H, Propuesta 1:
+                    [,1]   [,2]  [,3]   [,4]   [,5]
+d_log_ise          1.032  0.000 0.000  0.000  0.000
+inflacion_mensual -0.024  0.171 0.000  0.000  0.000
+exp_inflacion_12m -0.024  0.045 0.176  0.000  0.000
+tpm               -0.004  0.053 0.002  0.161 -0.017
+d_log_itcr        -0.187 -0.129 0.035 -0.040  2.289
+
+Tamaño del choque de una desviación estándar: 0.161 pp de TPM
+
+Bootstrap P1: 997 réplicas válidas de 1000
+Bootstrap P2: 998 réplicas válidas de 1000
+P5: 10753 de 20000 rotaciones cumplen los signos (54%)
+P6: 0 de 20000 rotaciones cumplen los signos (0%)
+   P6 queda vacía: con esta forma reducida ninguna rotación cumple sus signos; se omite en los cuadros
+P7: 10889 de 20000 rotaciones cumplen los signos (54%)
+
+Respuestas a un alza de 25 pb en la TPM (P1-P2: estimación puntual, * = banda al 90% excluye cero; P5-P7: mediana del conjunto)
+ Propuesta ISE_0 ISE_12 ISE_24 Inflación_0 Inflación_12 Inflación_24
+        P1  0.00 -0.47* -0.65*       -0.00        -0.07        -0.12
+        P2  2.02   0.39   0.08        0.00         0.31        -0.04
+        P5  0.00  -0.62  -0.76        0.00        -0.43        -0.28
+        P7  0.00  -0.62  -0.76        0.00        -0.43        -0.28
+ Expectativas_0 Expectativas_12 Expectativas_24 ITCR_0 ITCR_12 ITCR_24
+           0.00            0.00           -0.04  -0.06   -0.56   -0.36
+          -0.00            0.11           -0.02   0.21   -0.21   -0.77
+           0.00           -0.03           -0.09  -3.49   -4.65   -3.96
+           0.00           -0.03           -0.09  -3.51   -4.67   -3.98

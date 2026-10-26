@@ -1,0 +1,33 @@
+Corrección de sesgo en la P9 y la P10: 2026-10-25 19:52:15 
+
+========== P9 ==========
+Raíz más grande: MCO 0.949 -> corregida 0.955 (se aplicó 100% del sesgo)
+MCO       aceptados  7427; VAR explosivo en 12% de los sorteos | mediana [p16, p84]:
+   mes   0: ISE +0.00 [+0.00, +0.00] | TC -1.28 [-2.06, -0.54] | inflación +0.00 [+0.00, +0.00]
+   mes  12: ISE -0.53 [-0.77, -0.30] | TC -2.14 [-3.66, -0.94] | inflación -0.21 [-0.46, +0.02]
+   mes  24: ISE -0.69 [-1.06, -0.41] | TC -1.75 [-3.94, -0.17] | inflación -0.18 [-0.43, +0.01]
+   mes  48: ISE -0.58 [-0.99, -0.25] | TC -1.33 [-3.45, +0.15] | inflación +0.03 [-0.06, +0.18]
+   mes 120: ISE -0.61 [-1.10, -0.26] | TC -1.48 [-4.00, +0.13] | inflación +0.00 [-0.03, +0.04]
+corregida aceptados  7489; VAR explosivo en 12% de los sorteos | mediana [p16, p84]:
+   mes   0: ISE +0.00 [+0.00, +0.00] | TC -1.28 [-2.06, -0.53] | inflación +0.00 [+0.00, +0.00]
+   mes  12: ISE -0.64 [-0.93, -0.37] | TC -2.68 [-4.67, -1.25] | inflación -0.27 [-0.57, -0.00]
+   mes  24: ISE -0.90 [-1.39, -0.53] | TC -2.45 [-5.62, -0.34] | inflación -0.25 [-0.63, +0.04]
+   mes  48: ISE -0.74 [-1.40, -0.31] | TC -1.78 [-5.59, +0.29] | inflación +0.01 [-0.20, +0.21]
+   mes 120: ISE -0.78 [-1.69, -0.25] | TC -2.09 [-7.52, +0.60] | inflación -0.00 [-0.18, +0.10]
+
+========== P10 ==========
+Raíz más grande: MCO 0.998 -> corregida 1.000 (se aplicó 36% del sesgo)
+MCO       aceptados  6725; VAR explosivo en 80% de los sorteos | mediana [p16, p84]:
+   mes   0: ISE +0.00 [+0.00, +0.00] | TC -1.22 [-2.06, -0.40] | inflación +0.00 [+0.00, +0.00]
+   mes  12: ISE -0.21 [-0.39, -0.05] | TC -1.88 [-3.41, -0.67] | inflación -0.16 [-0.39, +0.05]
+   mes  24: ISE -0.29 [-0.54, -0.08] | TC -1.92 [-4.10, -0.64] | inflación -0.42 [-0.82, -0.16]
+   mes  48: ISE -0.08 [-0.40, +0.26] | TC -0.59 [-3.84, +0.83] | inflación -0.16 [-0.70, +0.17]
+   mes 120: ISE -0.50 [-1.98, -0.07] | TC +0.05 [-5.67, +3.41] | inflación -0.00 [-1.08, +0.57]
+corregida aceptados  6729; VAR explosivo en 80% de los sorteos | mediana [p16, p84]:
+   mes   0: ISE +0.00 [+0.00, +0.00] | TC -1.22 [-2.06, -0.40] | inflación +0.00 [+0.00, +0.00]
+   mes  12: ISE -0.21 [-0.39, -0.04] | TC -1.97 [-3.56, -0.70] | inflación -0.16 [-0.40, +0.05]
+   mes  24: ISE -0.29 [-0.56, -0.08] | TC -2.02 [-4.23, -0.66] | inflación -0.44 [-0.85, -0.15]
+   mes  48: ISE -0.08 [-0.43, +0.28] | TC -0.73 [-4.13, +0.90] | inflación -0.18 [-0.73, +0.18]
+   mes 120: ISE -0.54 [-2.04, -0.04] | TC +0.03 [-5.74, +3.63] | inflación -0.01 [-1.09, +0.61]
+
+Listo: figuras/P9_P10_sesgo.png, data/P9_P10_sesgo.rds

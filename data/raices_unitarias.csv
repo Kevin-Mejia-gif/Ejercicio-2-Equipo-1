@@ -1,0 +1,19 @@
+"serie","transformacion","deterministicos","adf_estadistico","adf_critico_5","adf_rechaza_raiz","kpss_estadistico","kpss_critico_5","kpss_rechaza_estacionariedad"
+"log_ise","nivel","constante y tendencia",-2.97,-3.42,FALSE,0.629,0.146,TRUE
+"log_ise","primera diferencia","constante",-9.76,-2.87,TRUE,0.067,0.463,FALSE
+"inflacion_mensual","nivel","constante",-2.23,-2.87,FALSE,0.405,0.463,FALSE
+"inflacion_mensual","primera diferencia","constante",-7.07,-2.87,TRUE,0.015,0.463,FALSE
+"inflacion_anual","nivel","constante",-2.17,-2.87,FALSE,0.69,0.463,TRUE
+"inflacion_anual","primera diferencia","constante",-4.42,-2.87,TRUE,0.068,0.463,FALSE
+"exp_inflacion_12m","nivel","constante",-3,-2.87,TRUE,0.539,0.463,TRUE
+"exp_inflacion_12m","primera diferencia","constante",-7.32,-2.87,TRUE,0.132,0.463,FALSE
+"credito_real_anual","nivel","constante",-1.31,-2.87,FALSE,2.673,0.463,TRUE
+"credito_real_anual","primera diferencia","constante",-5.06,-2.87,TRUE,0.082,0.463,FALSE
+"tpm","nivel","constante",-2.59,-2.87,FALSE,0.709,0.463,TRUE
+"tpm","primera diferencia","constante",-3.79,-2.87,TRUE,0.188,0.463,FALSE
+"log_itcr","nivel","constante y tendencia",-1.79,-3.42,FALSE,0.462,0.146,TRUE
+"log_itcr","primera diferencia","constante",-10.07,-2.87,TRUE,0.149,0.463,FALSE
+"log_brent","nivel","constante y tendencia",-3.12,-3.42,FALSE,0.251,0.146,TRUE
+"log_brent","primera diferencia","constante",-10.92,-2.87,TRUE,0.049,0.463,FALSE
+"fed","nivel","constante",-2.48,-2.87,FALSE,0.799,0.463,TRUE
+"fed","primera diferencia","constante",-3.82,-2.87,TRUE,0.185,0.463,FALSE

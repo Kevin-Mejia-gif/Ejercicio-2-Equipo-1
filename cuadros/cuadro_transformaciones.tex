@@ -1,0 +1,22 @@
+\begin{table}[H]
+\centering
+\caption{Variables del VAR y sus transformaciones}
+\label{tab:transformaciones}
+\small
+\begin{tabular}{@{}llll@{}}
+\toprule
+Variable & Papel en el VAR & Transformación & Unidad \\
+\midrule
+ISE & Endógena 1 & $100 \times (\log ISE_t - \log ISE_{t-1})$ & \% mensual \\
+Inflación & Endógena 2 & $100 \times (\log IPC_t - \log IPC_{t-1})$ & \% mensual \\
+Expectativas & Endógena 3 & $100 \times$ mediana de la expectativa a 12 meses & \% \\
+TPM & Endógena 4 & Promedio mensual de la serie diaria & \% \\
+ITCR & Endógena 5 & $100 \times (\log ITCR_t - \log ITCR_{t-1})$ & \% mensual \\
+Brent & Exógena & $100 \times (\log Brent_t - \log Brent_{t-1})$, en $t$ y $t-1$ & \% mensual \\
+Tasa Fed & Exógena & Nivel, en $t$ y $t-1$ & \% \\
+Estacionales & Exógena & 11 dummies, una por mes de febrero a diciembre & --- \\
+Puntuales & Exógena & Una dummy por mes: mar--dic 2020 y may 2021 & --- \\
+\bottomrule
+\end{tabular}
+\notascuadro{\textit{Nota.} El orden de las endógenas es el del VAR. Un aumento del ITCR es una depreciación real del peso. Las respuestas al impulso del ISE y del ITCR se acumulan para leerse en nivel; la de la inflación se acumula 12 meses para leerse como inflación anual.}
+\end{table}

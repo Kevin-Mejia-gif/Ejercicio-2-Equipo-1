@@ -1,0 +1,74 @@
+Inferencia para la Propuesta 1: 2026-10-25 19:48:17 
+
+Comprobación con 04_estructural.R: diferencia máxima 1.2e-15 | ángulo de la P1 5.9 grados | raíz más grande 0.949
+
+Cuadro 1. ARCH-LM (12 rezagos) y autocorrelación de orden 1 de los residuos y de sus cuadrados
+     Ecuacion ARCH_LM p_valor autocorr_u autocorr_u2
+          ISE    32.5 1.2e-03       0.07        0.12
+    Inflación     8.9 7.1e-01       0.07       -0.11
+ Expectativas     1.6 1.0e+00       0.00        0.02
+          TPM    44.0 1.5e-05      -0.01        0.29
+         ITCR    13.7 3.2e-01       0.01        0.03
+
+sigma_55 estimada 5.293 | desviación estándar con cuadrados independientes 0.568 | con varianza de largo plazo 0.770
+
+Tiempo de los bootstraps: 1.3 minutos
+Con medias restadas, la A estimada no cambia: diferencia máxima 1.1e-11
+
+Cuadro 2. Respuesta a un alza de 25 pb: estimación y bandas de 68% (variable_mes)
+               Estimacion Estimacion_corregida wild           iid           
+ITCR_0         -0.06      +0.15                [-1.11, +0.79] [-1.05, +0.81]
+ITCR_3         +0.06      +0.29                [-0.78, +0.80] [-0.75, +0.86]
+ITCR_12        -0.56      -0.60                [-1.07, +0.06] [-1.00, +0.05]
+Inflación_3    -0.01      -0.00                [-0.10, +0.05] [-0.10, +0.06]
+Inflación_6    -0.02      -0.01                [-0.13, +0.08] [-0.13, +0.10]
+Inflación_12   -0.07      -0.09                [-0.25, +0.11] [-0.24, +0.14]
+Inflación_24   -0.12      -0.12                [-0.22, -0.00] [-0.21, -0.02]
+Expectativas_3 +0.02      +0.02                [-0.02, +0.06] [-0.01, +0.06]
+Expectativas_6 +0.03      +0.02                [-0.02, +0.07] [-0.02, +0.08]
+ISE_12         -0.47      -0.55                [-0.58, -0.22] [-0.59, -0.27]
+ISE_24         -0.65      -0.77                [-0.76, -0.32] [-0.79, -0.38]
+ISE_36         -0.63      -0.76                [-0.77, -0.26] [-0.80, -0.32]
+               bloques        bloques24      sesgo          Hall_bloques  
+ITCR_0         [-1.29, +0.81] [-1.45, +0.72] [-1.44, +1.73] [-0.94, +1.17]
+ITCR_3         [-0.97, +0.77] [-1.15, +0.54] [-1.40, +1.91] [-0.64, +1.10]
+ITCR_12        [-1.03, +0.04] [-1.10, -0.07] [-2.20, +1.11] [-1.16, -0.10]
+Inflación_3    [-0.11, +0.06] [-0.11, +0.06] [-0.11, +0.10] [-0.09, +0.08]
+Inflación_6    [-0.14, +0.10] [-0.16, +0.11] [-0.17, +0.14] [-0.14, +0.11]
+Inflación_12   [-0.26, +0.14] [-0.30, +0.15] [-0.38, +0.16] [-0.28, +0.12]
+Inflación_24   [-0.23, -0.02] [-0.25, -0.02] [-0.34, +0.07] [-0.22, -0.01]
+Expectativas_3 [-0.03, +0.07] [-0.01, +0.08] [-0.03, +0.08] [-0.02, +0.07]
+Expectativas_6 [-0.02, +0.08] [-0.01, +0.09] [-0.06, +0.09] [-0.03, +0.07]
+ISE_12         [-0.62, -0.21] [-0.63, -0.23] [-0.87, -0.27] [-0.74, -0.32]
+ISE_24         [-0.82, -0.32] [-0.80, -0.31] [-1.17, -0.44] [-0.98, -0.49]
+ISE_36         [-0.80, -0.26] [-0.81, -0.22] [-1.19, -0.41] [-0.99, -0.45]
+
+Cuadro 3. Diagnósticos por método (estimación: ángulo 5.9, multiplicador 51.3, sigma_55 5.293, ITCR_0 -0.06, Infl_36 -0.02)
+          validas deprecia angulo_p16.16% angulo_p50 angulo_p84.84%
+wild          997     0.43          -10.5        4.9           20.2
+iid          1998     0.45          -10.5        5.6           20.0
+bloques      1998     0.40          -12.3        4.2           20.2
+bloques24    1995     0.36          -13.2        3.0           19.7
+sesgo        1991     0.56          -14.3       10.6           33.0
+          multiplicador_p50 de_sigma55 mediana_ITCR0 mediana_Infl36
+wild                   42.7      0.220         -0.18           0.00
+iid                    42.1      0.467         -0.10          -0.01
+bloques                42.0      0.645         -0.24          -0.01
+bloques24              44.8      0.683         -0.40           0.01
+sesgo                  58.8      0.639          0.20          -0.02
+
+Cuadro 4. Meses (0 a 12) en que la banda de 68% excluye el cero por arriba
+Wild (04_estructural.R)              inflación:                            expectativas: 1                          ITCR:            Bonferroni (inflación, meses 1-8): no excluye el cero
+iid                                  inflación:                            expectativas: 1                          ITCR:            Bonferroni (inflación, meses 1-8): no excluye el cero
+Bloques de 12 meses                  inflación:                            expectativas: 1                          ITCR:            Bonferroni (inflación, meses 1-8): no excluye el cero
+Bloques de 24 meses                  inflación:                            expectativas: 1 5                        ITCR:            Bonferroni (inflación, meses 1-8): no excluye el cero
+Bloques de 12 + corrección de sesgo inflación:                            expectativas: 1                          ITCR:            Bonferroni (inflación, meses 1-8): no excluye el cero
+
+Sesgo de la persistencia (suma de coeficientes propios en A(1)); en el bootstrap por bloques la verdad es la A estimada
+Inflación    MCO 0.625 | promedio de las réplicas 0.587 | corregida 0.664
+Expectativas  MCO 0.829 | promedio de las réplicas 0.801 | corregida 0.857
+TPM           MCO 0.965 | promedio de las réplicas 0.959 | corregida 0.971
+Multiplicador de largo plazo 1/(valor singular menor de I - A(1)): MCO 51.3 | mediana de las réplicas 42.0 | corregido 88.7
+Corrección: se aplicó 100% del sesgo estimado; raíz más grande 0.949 -> 0.955; ángulo de la P1 5.9 -> 9.4 grados
+
+Listo: figuras/P1_residuos_ARCH.png, figuras/P1_bootstrap_distribuciones.png, figuras/irf_P1_bloques_25pb.png, figuras/irf_P1_sesgo_25pb.png; data/P1_inferencia.rds y data/P1_bandas_25pb.csv

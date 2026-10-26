@@ -1,0 +1,131 @@
+% ===========================================================================
+%  beamerthemecolmex.sty
+%  Tema de Beamer para presentaciones del Centro de Estudios Economicos,
+%  El Colegio de Mexico.
+%
+%  Uso:   \documentclass{beamer}
+%         \usetheme{colmex}
+%
+%  Deriva del tema "simple" de Facundo Munoz (2015), distribuido bajo la
+%  LaTeX Project Public License y/o la GNU Public License. Este archivo
+%  absorbe las partes de ese tema que sobreviven a las personalizaciones
+%  del CEE, de modo que no hace falta beamerthemesimple.sty.
+%
+%  Requiere en la carpeta img/ :  colmex_logo.png   cee_logo.png
+% ===========================================================================
+
+\ProvidesPackage{beamerthemecolmex}[2026/09/18 Tema CEE - El Colegio de Mexico]
+
+\mode<presentation>
+
+% ---------------------------------------------------------------------------
+% 1. Paquetes de apoyo
+% ---------------------------------------------------------------------------
+\RequirePackage{lmodern}
+\RequirePackage{booktabs}
+\RequirePackage{caption}
+\RequirePackage{subcaption}
+\RequirePackage{graphicx}
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{enumitem}
+\RequirePackage{hyperref}
+\RequirePackage{tikz}
+\RequirePackage[absolute,overlay]{textpos}   % coloca el logo del CEE en la portada
+
+% Fuentes Computer Modern (revierte lmodern a propósito: así se ve el original)
+% (se deja lmodern activo: es la versión escalable de Computer Modern.
+%  Revertir a cmr/cmss/cmtt obliga a generar la fuente con METAFONT en
+%  tamaños no estándar como 34pt, lo cual es muy lento en Overleaf.)
+
+% ---------------------------------------------------------------------------
+% 2. Paleta
+% ---------------------------------------------------------------------------
+\definecolor{azulraf}{HTML}{5D8AA8}    % azul institucional: títulos y barra inferior
+\definecolor{destacado}{HTML}{515151}  % gris oscuro: estructura
+\definecolor{normal}{HTML}{797979}     % gris medio: texto de cuerpo
+\definecolor{fondo}{HTML}{E6E6E6}      % gris claro: fondo de los bloques
+
+\usetheme{default}
+\usecolortheme[named=destacado]{structure}
+\usefonttheme{structurebold}
+
+\setbeamercolor{normal text}{bg=white,fg=normal}
+\setbeamercolor*{block title}{bg=fondo,fg=destacado}
+\setbeamercolor*{block body}{bg=fondo,fg=normal}
+\setbeamercolor{alerted text}{fg=black}
+
+\setbeamercolor{title}{fg=azulraf}       % título de la portada
+\setbeamercolor{frametitle}{fg=azulraf}  % título de cada lámina
+\setbeamercolor{footline}{fg=white,bg=azulraf}
+\setbeamercolor{navigation symbols}{fg=white}
+\setbeamercolor{navigation symbols dimmed}{fg=gray}
+
+% ---------------------------------------------------------------------------
+% 3. Elementos estructurales
+% ---------------------------------------------------------------------------
+\setbeamersize{text margin left=0.35cm,text margin right=0.35cm}
+\setbeamercovered{transparent}
+\setbeamertemplate{blocks}[rounded][shadow=false]  % sin sombra: causaba una
+                                                   % barra negra en algunos
+                                                   % compiladores
+\setbeamertemplate{navigation symbols}[default]
+\setbeamertemplate{headline}{}
+
+% Viñetas visibles en los dos primeros niveles
+\setlist[itemize,1]{label=\textbullet,leftmargin=1.4em}
+\setlist[itemize,2]{label=\textendash,leftmargin=1.4em}
+
+% Barra inferior: navegación + autor corto + número de lámina
+\setbeamertemplate{footline}{%
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=2.25ex,dp=1ex,center]{footline}%
+    \insertnavigation{\paperwidth}
+    \usebeamerfont{author in head/foot}\insertshortauthor
+    \hfill \insertframenumber{} / \inserttotalframenumber\hspace*{2ex}
+  \end{beamercolorbox}%
+  }%
+  \vskip0pt%
+}
+
+% ---------------------------------------------------------------------------
+% 4. Logos
+% ---------------------------------------------------------------------------
+% El logo del Colmex aparece grande en la portada y pequeño en el resto.
+% \portada hace el cambio automáticamente.
+
+\newcommand{\colmexlogogrande}{%
+  \logo{\includegraphics[height=1cm,keepaspectratio]{img/colmex_logo.png}~\vspace{210pt}}%
+}
+\newcommand{\colmexlogochico}{%
+  \logo{\includegraphics[height=0.6cm,keepaspectratio]{img/colmex_logo.png}\hspace{0.3cm}\vspace{220pt}}%
+}
+\colmexlogogrande
+
+% ---------------------------------------------------------------------------
+% 5. Portada
+% ---------------------------------------------------------------------------
+% \presentador{...}  -> nombre de quien expone (esquina inferior derecha)
+% \portada           -> genera la lámina de título completa
+
+\newcommand{\@presentador}{}
+\newcommand{\presentador}[1]{\renewcommand{\@presentador}{#1}}
+
+\newcommand{\portada}{%
+  \begin{frame}
+    \begin{textblock*}{2.6cm}(0.5cm,0.5cm)
+      \includegraphics[width=2.6cm]{img/cee_logo.png}
+    \end{textblock*}
+    \begin{textblock*}{4.5cm}(\dimexpr\paperwidth-4.8cm\relax,\dimexpr\paperheight-1.4cm\relax)
+      \begin{flushright}
+        \usebeamerfont{author}\@presentador
+      \end{flushright}
+    \end{textblock*}
+    \titlepage
+  \end{frame}%
+  \colmexlogochico%
+}
+
+\mode<all>
+

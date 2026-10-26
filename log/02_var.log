@@ -1,0 +1,266 @@
+VAR reducido: 2026-10-25 19:48:17 
+
+Criterios de información (muestra común desde 2010-01 ):
+       p     AIC      HQ     BIC
+ [1,]  1 -8.4540 -8.2865 -8.0403
+ [2,]  2 -8.7354 -8.4005 -7.9079
+ [3,]  3 -8.7935 -8.2912 -7.5523
+ [4,]  4 -9.1873 -8.5175 -7.5324
+ [5,]  5 -9.2283 -8.3911 -7.1596
+ [6,]  6 -9.1292 -8.1245 -6.6468
+ [7,]  7 -8.9834 -7.8113 -6.0873
+ [8,]  8 -8.9215 -7.5820 -5.6117
+ [9,]  9 -8.9426 -7.4356 -5.2190
+[10,] 10 -8.8632 -7.1887 -4.7259
+[11,] 11 -8.9362 -7.0943 -4.3852
+[12,] 12 -8.8920 -6.8826 -3.9272
+
+Rezagos elegidos: AIC.p = 5, HQ.p = 4, BIC.p = 1 
+
+Razón de verosimilitud, p contra p + 1 (misma muestra):
+  VAR(4) contra VAR(5): LR = 43.0, gl = 25, p = 0.014
+  VAR(5) contra VAR(6): LR = 21.6, gl = 25, p = 0.658
+  VAR(6) contra VAR(7): LR = 14.4, gl = 25, p = 0.953
+  VAR(7) contra VAR(8): LR = 25.0, gl = 25, p = 0.463
+
+========== VAR con 1 rezago(s) ==========
+Observaciones efectivas: 199 | parámetros por ecuación: 32 
+Muestra: 2010-01 a 2026-07 
+
+Módulo de la raíz más grande: 0.9596 (estable) 
+
+Portmanteau ajustado:
+       estadistico  gl p_valor
+h = 12     507.706 275       0
+h = 24     846.025 575       0
+
+LM de autocorrelación (Edgerton-Shukur):
+         estadistico p_valor
+orden 1        2.262       0
+orden 12       1.918       0
+
+Ljung-Box (12 rezagos) por ecuación:
+                  estadistico p_valor
+d_log_ise              34.754   0.001
+inflacion_mensual       6.317   0.899
+exp_inflacion_12m      24.284   0.019
+tpm                   111.226   0.000
+d_log_itcr             11.742   0.467
+
+Jarque-Bera por ecuación:
+                  estadistico p_valor
+d_log_ise              15.017   0.001
+inflacion_mensual      11.451   0.003
+exp_inflacion_12m    9242.476   0.000
+tpm                    52.744   0.000
+d_log_itcr              5.984   0.050
+
+ARCH-LM (12 rezagos) por ecuación:
+                  estadistico p_valor
+d_log_ise              29.345   0.004
+inflacion_mensual       4.807   0.964
+exp_inflacion_12m       0.901   1.000
+tpm                    47.175   0.000
+d_log_itcr             23.640   0.023
+
+Dummies estacionales, F por ecuación:
+          F p_valor
+[1,]  0.908   0.534
+[2,] 18.698   0.000
+[3,]  2.139   0.020
+[4,]  1.208   0.285
+[5,]  2.206   0.016
+
+========== VAR con 4 rezago(s) ==========
+Observaciones efectivas: 199 | parámetros por ecuación: 47 
+Muestra: 2010-01 a 2026-07 
+
+Módulo de la raíz más grande: 0.9494 (estable) 
+
+Portmanteau ajustado:
+       estadistico  gl p_valor
+h = 12     262.268 200   0.002
+h = 24     522.693 500   0.233
+
+LM de autocorrelación (Edgerton-Shukur):
+         estadistico p_valor
+orden 1        2.268   0.000
+orden 12       1.358   0.002
+
+Ljung-Box (12 rezagos) por ecuación:
+                  estadistico p_valor
+d_log_ise              14.267   0.284
+inflacion_mensual       8.552   0.741
+exp_inflacion_12m       6.077   0.912
+tpm                    12.824   0.382
+d_log_itcr              8.393   0.754
+
+Jarque-Bera por ecuación:
+                  estadistico p_valor
+d_log_ise               5.348   0.069
+inflacion_mensual       6.813   0.033
+exp_inflacion_12m   11104.881   0.000
+tpm                    19.290   0.000
+d_log_itcr              0.260   0.878
+
+ARCH-LM (12 rezagos) por ecuación:
+                  estadistico p_valor
+d_log_ise              25.163   0.014
+inflacion_mensual       6.245   0.903
+exp_inflacion_12m       2.010   0.999
+tpm                    51.114   0.000
+d_log_itcr             22.047   0.037
+
+Dummies estacionales, F por ecuación:
+          F p_valor
+[1,]  0.844   0.596
+[2,] 15.935   0.000
+[3,]  0.924   0.519
+[4,]  1.109   0.358
+[5,]  1.962   0.036
+
+========== VAR con 5 rezago(s) ==========
+Observaciones efectivas: 199 | parámetros por ecuación: 52 
+Muestra: 2010-01 a 2026-07 
+
+Módulo de la raíz más grande: 0.9463 (estable) 
+
+Portmanteau ajustado:
+       estadistico  gl p_valor
+h = 12     239.582 175   0.001
+h = 24     496.668 475   0.238
+
+LM de autocorrelación (Edgerton-Shukur):
+         estadistico p_valor
+orden 1        1.413   0.090
+orden 12       1.253   0.017
+
+Ljung-Box (12 rezagos) por ecuación:
+                  estadistico p_valor
+d_log_ise              15.213   0.230
+inflacion_mensual       8.703   0.728
+exp_inflacion_12m       5.599   0.935
+tpm                    10.465   0.575
+d_log_itcr              7.304   0.837
+
+Jarque-Bera por ecuación:
+                  estadistico p_valor
+d_log_ise               6.064   0.048
+inflacion_mensual       8.560   0.014
+exp_inflacion_12m    9975.118   0.000
+tpm                     7.181   0.028
+d_log_itcr              0.368   0.832
+
+ARCH-LM (12 rezagos) por ecuación:
+                  estadistico p_valor
+d_log_ise              31.362   0.002
+inflacion_mensual       9.018   0.701
+exp_inflacion_12m       1.586   1.000
+tpm                    44.586   0.000
+d_log_itcr             17.293   0.139
+
+Dummies estacionales, F por ecuación:
+          F p_valor
+[1,]  1.029   0.424
+[2,] 13.800   0.000
+[3,]  0.832   0.609
+[4,]  0.748   0.691
+[5,]  1.929   0.040
+
+========== VAR con 6 rezago(s) ==========
+Observaciones efectivas: 199 | parámetros por ecuación: 57 
+Muestra: 2010-01 a 2026-07 
+
+Módulo de la raíz más grande: 0.9486 (estable) 
+
+Portmanteau ajustado:
+       estadistico  gl p_valor
+h = 12     221.720 150   0.000
+h = 24     483.803 450   0.131
+
+LM de autocorrelación (Edgerton-Shukur):
+         estadistico p_valor
+orden 1        1.190   0.242
+orden 12       1.334   0.004
+
+Ljung-Box (12 rezagos) por ecuación:
+                  estadistico p_valor
+d_log_ise              12.867   0.379
+inflacion_mensual       8.093   0.778
+exp_inflacion_12m       8.485   0.746
+tpm                     9.112   0.693
+d_log_itcr              5.739   0.929
+
+Jarque-Bera por ecuación:
+                  estadistico p_valor
+d_log_ise               6.076   0.048
+inflacion_mensual      14.273   0.001
+exp_inflacion_12m    7805.685   0.000
+tpm                     5.948   0.051
+d_log_itcr              0.411   0.814
+
+ARCH-LM (12 rezagos) por ecuación:
+                  estadistico p_valor
+d_log_ise              32.502   0.001
+inflacion_mensual       8.926   0.709
+exp_inflacion_12m       1.629   1.000
+tpm                    44.045   0.000
+d_log_itcr             13.707   0.320
+
+Dummies estacionales, F por ecuación:
+          F p_valor
+[1,]  1.037   0.417
+[2,] 12.585   0.000
+[3,]  1.069   0.390
+[4,]  0.603   0.824
+[5,]  1.499   0.138
+
+========== VAR con 8 rezago(s) ==========
+Observaciones efectivas: 199 | parámetros por ecuación: 67 
+Muestra: 2010-01 a 2026-07 
+
+Módulo de la raíz más grande: 0.9251 (estable) 
+
+Portmanteau ajustado:
+       estadistico  gl p_valor
+h = 12     206.054 100   0.000
+h = 24     481.984 400   0.003
+
+LM de autocorrelación (Edgerton-Shukur):
+         estadistico p_valor
+orden 1        1.290   0.160
+orden 12       1.399   0.001
+
+Ljung-Box (12 rezagos) por ecuación:
+                  estadistico p_valor
+d_log_ise              13.533   0.332
+inflacion_mensual      13.865   0.309
+exp_inflacion_12m       8.296   0.762
+tpm                     7.979   0.787
+d_log_itcr              4.199   0.980
+
+Jarque-Bera por ecuación:
+                  estadistico p_valor
+d_log_ise               6.362   0.042
+inflacion_mensual       2.673   0.263
+exp_inflacion_12m    8817.797   0.000
+tpm                     3.697   0.157
+d_log_itcr              2.189   0.335
+
+ARCH-LM (12 rezagos) por ecuación:
+                  estadistico p_valor
+d_log_ise              25.498   0.013
+inflacion_mensual       9.431   0.666
+exp_inflacion_12m       1.478   1.000
+tpm                    51.107   0.000
+d_log_itcr              9.597   0.651
+
+Dummies estacionales, F por ecuación:
+          F p_valor
+[1,]  0.945   0.499
+[2,] 12.542   0.000
+[3,]  0.917   0.526
+[4,]  0.701   0.735
+[5,]  1.447   0.159
+
+Especificación principal: VAR con 6 rezagos
